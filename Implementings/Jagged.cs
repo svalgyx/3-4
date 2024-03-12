@@ -5,7 +5,7 @@ namespace HW3_4.Implementings
         private int Rows { get; set; }
         private T[][] array;
 
-        public JaggedArray(string init, int rows) : base(init)
+        public Jagged(string init, int rows) : base(init)
         {
             Rows = rows;
             array = new T[rows][];

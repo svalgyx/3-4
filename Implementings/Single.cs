@@ -1,4 +1,4 @@
-namespace HW3_4.Implementations
+namespace HW3_4.Implementings
 {
     public sealed class Single<T> : ArrayBase<T>
     {

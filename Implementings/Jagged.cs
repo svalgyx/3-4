@@ -11,7 +11,7 @@ namespace HW3_4.Implementings
             array = new T[rows][];
         }
 
-        protected override void CreateByUser() {
+        protected override void UserCreate() {
             for (int i = 0; i < Rows; i++)
             {
                 string row = Console.ReadLine();
@@ -24,7 +24,7 @@ namespace HW3_4.Implementings
             }
         }
 
-        protected override void CreateByRandom() {
+        protected override void RandomCreate() {
             Random rnd = new Random();
             for (int i = 0; i < Rows; i++)
             {
@@ -41,17 +41,17 @@ namespace HW3_4.Implementings
         {
             if (base.Init)
             {
-                CreateByUser();
+                UserCreate();
             }
             else
             {
-                CreateByRandom();
+                RandomCreate();
             }
         }
 
         public override void Print()
         {
-            Console.WriteLine("Printing jagged array: ");
+            Console.WriteLine("jagged array: ");
             for (int i = 0; i < Rows; i++)
             {
                 for (int j = 0; j < array[i].Length; j++)

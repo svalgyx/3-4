@@ -25,12 +25,12 @@ namespace HW3_4.Implementings
             }
             return default(T);
         }
-        public int GenRandomInt()
+        public int RandomInt()
         {
             int random_value = rnd.Next(1, 100);
             return random_value;
         }
-        public string GenRandomString()
+        public string RandomString()
         {
             string alphabet = "abcdefghijklmnopqrstuvwxyz";
             int letters = rnd.Next(1, 11);
@@ -41,7 +41,7 @@ namespace HW3_4.Implementings
             }
             return random_string;
         }
-        public bool GenRandomBool()
+        public bool RandomBool()
         {
             int b = rnd.Next(0, 2);
             if (b == 0)
@@ -50,28 +50,28 @@ namespace HW3_4.Implementings
             }
             return true;
         }
-        public double GenRandomDouble()
+        public double RandomDouble()
         {
             double random_double = rnd.NextDouble();
-            return GenRandomInt() + random_double;
+            return RandomInt() + random_double;
         }
-        public T GenRandomValue()
+        public T RandomValue()
         {
             if (typeof(T) == typeof(int))
             {
-                return (T)(object)GenRandomInt();
+                return (T)(object)RandomInt();
             }
             if (typeof(T) == typeof(double))
             {
-                return (T)(object)GenRandomDouble();
+                return (T)(object)RandomDouble();
             }
             if (typeof(T) == typeof(bool))
             {
-                return (T)(object)GenRandomBool();
+                return (T)(object)RandomBool();
             }
             if (typeof(T) == typeof(string))
             {
-                return (T)(object)GenRandomString();
+                return (T)(object)RandomString();
             }
             return default(T);
         }

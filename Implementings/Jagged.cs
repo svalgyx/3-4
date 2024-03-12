@@ -1,106 +1,65 @@
-namespace HW3_1
+namespace HW3_4.Implementations
 {
-    class Jagged
+    public sealed class JaggedArray<T> : ArrayBase<T>
     {
-        private int rows = 0;
-        private bool init = true;
-        private int[][] arr;
+        private int Rows { get; set; }
+        private T[][] array;
 
-        public Jagged(int input_rows, bool input_init = true)
+        public JaggedArray(string init, int rows) : base(init)
         {
-            rows = input_rows;
-            init = input_init;
-            arr = new int[rows][];
+            Rows = rows;
+            array = new T[rows][];
         }
 
-        public void CreateNew()
-        {
-            if (init)
+        protected override void CreateByUser() {
+            for (int i = 0; i < Rows; i++)
             {
-                for (int i = 0; i < rows; i++)
+                string row = Console.ReadLine();
+                string[] array_row = row.Split(' ');
+                array[i] = new T[array_row.Length];
+                for (int j = 0; j < array_row.Length; j++)
                 {
-                    string row = Console.ReadLine();
-                    string[] array_row = row.Split(' ');
-                    arr[i] = new int[array_row.Length];
-                    for (int j = 0; j < array_row.Length; j++)
-                    {
-                        arr[i][j] = int.Parse(array_row[j]);
-                    }
+                    array[i][j] = type_helper.Convert(array_row[j]);
                 }
+            }
+        }
+
+        protected override void CreateByRandom() {
+            Random rnd = new Random();
+            for (int i = 0; i < Rows; i++)
+            {
+                int array_row_len = rnd.Next(1, 10);
+                array[i] = new T[array_row_len];
+                for (int j = 0; j < array_row_len; j++)
+                {
+                    array[i][j] = type_helper.GenRandomValue();
+                }
+            }
+        }
+
+        public void Create()
+        {
+            if (base.Init)
+            {
+                CreateByUser();
             }
             else
             {
-                Random rnd = new Random();
-                for (int i = 0; i < rows; i++)
-                {
-                    int array_row_len = rnd.Next(1, 10);
-                    arr[i] = new int[array_row_len];
-                    for (int j = 0; j < array_row_len; j++)
-                    {
-                        arr[i][j] = rnd.Next(1, 100);
-                    }
-                }
+                CreateByRandom();
             }
         }
 
-        public void WriteArray()
+        public override void Print()
         {
-            Console.WriteLine("Writing jagged array: ");
-            for (int i = 0; i < rows; i++)
+            Console.WriteLine("Printing jagged array: ");
+            for (int i = 0; i < Rows; i++)
             {
-                for (int j = 0; j < arr[i].Length; j++)
+                for (int j = 0; j < array[i].Length; j++)
                 {
-                    Console.Write(arr[i][j] + " ");
+                    Console.Write(array[i][j] + " ");
                 }
                 Console.WriteLine();
             }
-        }
-
-        public double Average()
-        {
-            int sum = 0;
-            int counter = 0;
-            for (int i = 0; i < rows; i++)
-            {
-                for (int j = 0; j < arr[i].Length; j++)
-                {
-                    sum += arr[i][j];
-                    counter += 1;
-                }
-            }
-            Console.WriteLine("Counted the average value of the array: ");
-            return (double)sum / (double)counter;
-        }
-
-        public double[] AverageValues()
-        {
-            double[] average_values = new double[rows];
-            for (int i = 0; i < rows; i++)
-            {
-                int sum = 0;
-                for (int j = 0; j < arr[i].Length; j++)
-                {
-                    sum += arr[i][j];
-                }
-                average_values[i] = (double)sum / (double)arr[i].Length;
-            }
-            Console.WriteLine(" average values of the array: ");
-            return average_values;
-        }
-
-        public void NumsToo()
-        {
-            for (int i = 0; i < rows; i++)
-            {
-                for (int j = 0; j < arr[i].Length; j++)
-                {
-                    if (arr[i][j] % 2 == 0)
-                    {
-                        arr[i][j] = i * j;
-                    }
-                }
-            }
-            Console.WriteLine("Elements were changed too with multiplication of their indices: ");
         }
     }
 }

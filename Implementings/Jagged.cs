@@ -1,4 +1,4 @@
-namespace HW3_4.Implementations
+namespace HW3_4.Implementings
 {
     public sealed class Jagged<T> : ArrayBase<T>
     {

@@ -1,10 +1,10 @@
 namespace HW3_4.Implementations
 {
-    public sealed class SingleArray<T> : ArrayBase<T>
+    public sealed class Single<T> : ArrayBase<T>
     {
         private int Len { get; set; }
         private T[] array;
-        public SingleArray(string init, int len) : base(init)
+        public Single(string init, int len) : base(init)
         {
             Len = len;
             array = new T[len];
@@ -40,7 +40,7 @@ namespace HW3_4.Implementations
 
         public override void Print()
         {
-            Console.WriteLine("Printing single array: ");
+            Console.WriteLine("single array: ");
             for (int i = 0; i < array.Length; i++)
             {
                 Console.Write(array[i] + " ");

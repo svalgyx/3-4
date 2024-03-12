@@ -1,11 +1,11 @@
 namespace HW3_4.Implementations
 {
-    public sealed class MatrixArray<T> : ArrayBase<T>
+    public sealed class Matrix<T> : ArrayBase<T>
     {
         private int Rows {  get; set; }
         private int Columns { get; set; }
         private T[,] array;
-        public MatrixArray(string init, int rows, int columns) : base(init)
+        public Matrix(string init, int rows, int columns) : base(init)
         {
             Rows = rows;
             Columns = columns;
@@ -49,7 +49,7 @@ namespace HW3_4.Implementations
 
         public override void Print()
         {
-            Console.WriteLine("Printing two-dimensional array: ");
+            Console.WriteLine("two-dimensional array: ");
             for (int i = 0; i < Rows; i++)
             {
                 string row = "";

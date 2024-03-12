@@ -6,10 +6,5 @@ namespace HW3_4.Interfaces
 
         void Print();
 
-        double Average();
-
-        void CreateByRandom();
-
-        void CreateByUser();
     }
 }

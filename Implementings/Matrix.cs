@@ -29,7 +29,7 @@ namespace HW3_4.Implementings
             {
                 for (int j = 0; j < Columns; j++)
                 {
-                    array[i, j] = type_helper.GenRandomValue();
+                    array[i, j] = type_helper.RandomValue();
                 }
             }
         }

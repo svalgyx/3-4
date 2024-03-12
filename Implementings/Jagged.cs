@@ -1,6 +1,6 @@
 namespace HW3_4.Implementations
 {
-    public sealed class JaggedArray<T> : ArrayBase<T>
+    public sealed class Jagged<T> : ArrayBase<T>
     {
         private int Rows { get; set; }
         private T[][] array;

@@ -22,7 +22,7 @@ namespace HW3_4.Implementings
             Random rnd = new Random();
             for (int i = 0; i < Len; i++)
             {
-                array[i] = type_helper.GenRandomValue();
+                array[i] = type_helper.RandomValue();
             }
         }
 

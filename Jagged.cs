@@ -1,11 +1,11 @@
 namespace HW3_4.Implementations
 {
-    public sealed class JaggedArray<T> : ArrayBase<T>
+    public sealed class Jagged<T> : ArrayBase<T>
     {
         private int Rows { get; set; }
         private T[][] array;
 
-        public JaggedArray(string init, int rows) : base(init)
+        public Jagged(string init, int rows) : base(init)
         {
             Rows = rows;
             array = new T[rows][];
@@ -51,7 +51,7 @@ namespace HW3_4.Implementations
 
         public override void Print()
         {
-            Console.WriteLine("Printing jagged array: ");
+            Console.WriteLine("jagged array: ");
             for (int i = 0; i < Rows; i++)
             {
                 for (int j = 0; j < array[i].Length; j++)

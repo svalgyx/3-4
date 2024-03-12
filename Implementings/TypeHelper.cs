@@ -1,6 +1,6 @@
 using HW3_4.Interfaces;
 
-namespace HW3_4.Implementations
+namespace HW3_4.Implementings
 {
     public class TypeHelper<T> : ITypeHelper<T>
     {

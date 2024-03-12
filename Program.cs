@@ -19,7 +19,7 @@ namespace HW3_4
                     int num = rnd.Next(0, 3);
                     if (num == 0)
                     {
-                        SingleArray<int> single_array = new SingleArray<int>("y", rnd.Next(1, 11));
+                        Single<int> single_array = new Single<int>("y", rnd.Next(1, 11));
                         single_array.Create();
                         arrays[i] = single_array;
                     }
@@ -27,14 +27,14 @@ namespace HW3_4
                     {
                         int rows = rnd.Next(1, 11);
                         int columns = rnd.Next(1, 11);
-                        MatrixArray<int> matrix_array = new MatrixArray<int>("y", rows, columns);
+                        Matrix<int> matrix_array = new Matrix<int>("y", rows, columns);
                         matrix_array.Create();
                         arrays[i] = matrix_array;
                     }
                     if (num == 2)
                     {
                         int jagged_rows = rnd.Next(1, 11);
-                        JaggedArray<int> jagged_array = new JaggedArray<int>("y", jagged_rows);
+                        Jagged<int> jagged_array = new Jagged<int>("y", jagged_rows);
                         jagged_array.Create();
                         arrays[i] = jagged_array;
                     }
@@ -44,7 +44,7 @@ namespace HW3_4
                     int num = rnd.Next(0, 3);
                     if (num == 0)
                     {
-                        SingleArray<double> single_array = new SingleArray<double>("y", rnd.Next(1, 11));
+                        Single<double> single_array = new Single<double>("y", rnd.Next(1, 11));
                         single_array.Create();
                         arrays[i] = single_array;
                     }
@@ -52,14 +52,14 @@ namespace HW3_4
                     {
                         int rows = rnd.Next(1, 11);
                         int columns = rnd.Next(1, 11);
-                        MatrixArray<double> matrix_array = new MatrixArray<double>("y", rows, columns);
+                        Matrix<double> matrix_array = new Matrix<double>("y", rows, columns);
                         matrix_array.Create();
                         arrays[i] = matrix_array;
                     }
                     if (num == 2)
                     {
                         int jagged_rows = rnd.Next(1, 11);
-                        JaggedArray<double> jagged_array = new JaggedArray<double>("y", jagged_rows);
+                        Jagged<double> jagged_array = new Jagged<double>("y", jagged_rows);
                         jagged_array.Create();
                         arrays[i] = jagged_array;
                     }
@@ -69,7 +69,7 @@ namespace HW3_4
                     int num = rnd.Next(0, 3);
                     if (num == 0)
                     {
-                        SingleArray<bool> single_array = new SingleArray<bool>("y", rnd.Next(1, 11));
+                        Single<bool> single_array = new Single<bool>("y", rnd.Next(1, 11));
                         single_array.Create();
                         arrays[i] = single_array;
                     }
@@ -77,14 +77,14 @@ namespace HW3_4
                     {
                         int rows = rnd.Next(1, 11);
                         int columns = rnd.Next(1, 11);
-                        MatrixArray<bool> matrix_array = new MatrixArray<bool>("y", rows, columns);
+                        Matrix<bool> matrix_array = new Matrix<bool>("y", rows, columns);
                         matrix_array.Create();
                         arrays[i] = matrix_array;
                     }
                     if (num == 2)
                     {
                         int jagged_rows = rnd.Next(1, 11);
-                        JaggedArray<bool> jagged_array = new JaggedArray<bool>("y", jagged_rows);
+                        Jagged<bool> jagged_array = new Jagged<bool>("y", jagged_rows);
                         jagged_array.Create();
                         arrays[i] = jagged_array;
                     }
@@ -94,7 +94,7 @@ namespace HW3_4
                     int num = rnd.Next(0, 3);
                     if (num == 0)
                     {
-                        SingleArray<string> single_array = new SingleArray<string>("y", rnd.Next(1, 11));
+                        Single<string> single_array = new Single<string>("y", rnd.Next(1, 11));
                         single_array.Create();
                         arrays[i] = single_array;
                     }
@@ -102,14 +102,14 @@ namespace HW3_4
                     {
                         int rows = rnd.Next(1, 11);
                         int columns = rnd.Next(1, 11);
-                        MatrixArray<string> matrix_array = new MatrixArray<string>("y", rows, columns);
+                        Matrix<string> matrix_array = new Matrix<string>("y", rows, columns);
                         matrix_array.Create();
                         arrays[i] = matrix_array;
                     }
                     if (num == 2)
                     {
                         int jagged_rows = rnd.Next(1, 11);
-                        JaggedArray<string> jagged_array = new JaggedArray<string>("y", jagged_rows);
+                        Jagged<string> jagged_array = new Jagged<string>("y", jagged_rows);
                         jagged_array.Create();
                         arrays[i] = jagged_array;
                     }

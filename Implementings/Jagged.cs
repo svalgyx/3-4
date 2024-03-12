@@ -32,7 +32,7 @@ namespace HW3_4.Implementings
                 array[i] = new T[array_row_len];
                 for (int j = 0; j < array_row_len; j++)
                 {
-                    array[i][j] = type_helper.GenRandomValue();
+                    array[i][j] = type_helper.RandomValue();
                 }
             }
         }

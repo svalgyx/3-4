@@ -1,4 +1,4 @@
-namespace HW3_3
+namespace HW3_4.Interfaces
 {
     public interface IArrayBase : IPrinter
     {

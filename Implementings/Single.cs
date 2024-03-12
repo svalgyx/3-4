@@ -10,7 +10,7 @@ namespace HW3_4.Implementings
             array = new T[len];
         }
 
-        protected override void CreateByUser() {
+        protected override void UserCreate() {
             string[] inputs = Console.ReadLine().Split(' ');
             for (int i = 0; i < Len; i++)
             {
@@ -18,7 +18,7 @@ namespace HW3_4.Implementings
             }
         }
 
-        protected override void CreateByRandom() {
+        protected override void RandomCreate() {
             Random rnd = new Random();
             for (int i = 0; i < Len; i++)
             {
@@ -30,11 +30,11 @@ namespace HW3_4.Implementings
         {
             if (base.Init)
             {
-                CreateByUser();
+                UserCreate();
             }
             else
             {
-                CreateByRandom();
+                RandomCreate();
             }
         }
 

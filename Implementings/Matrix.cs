@@ -1,5 +1,4 @@
-namespace HW3_4.Implementations
-{
+namespace HW3_4.Implementings
     public sealed class Matrix<T> : ArrayBase<T>
     {
         private int Rows {  get; set; }

@@ -19,24 +19,24 @@ namespace HW3_4
                     int num = rnd.Next(0, 3);
                     if (num == 0)
                     {
-                        Single<int> single_array = new Single<int>("y", rnd.Next(1, 11));
-                        single_array.Create();
-                        arrays[i] = single_array;
+                        Single<int> single_ar = new Single<int>("y", rnd.Next(1, 11));
+                        single_ar.Create();
+                        arrays[i] = single_ar;
                     }
                     if (num == 1)
                     {
                         int rows = rnd.Next(1, 11);
                         int columns = rnd.Next(1, 11);
-                        Matrix<int> matrix_array = new Matrix<int>("y", rows, columns);
-                        matrix_array.Create();
-                        arrays[i] = matrix_array;
+                        Matrix<int> matrix_ar = new Matrix<int>("y", rows, columns);
+                        matrix_ar.Create();
+                        arrays[i] = matrix_ar;
                     }
                     if (num == 2)
                     {
                         int jagged_rows = rnd.Next(1, 11);
-                        Jagged<int> jagged_array = new Jagged<int>("y", jagged_rows);
-                        jagged_array.Create();
-                        arrays[i] = jagged_array;
+                        Jagged<int> jagged_ar = new Jagged<int>("y", jagged_rows);
+                        jagged_ar.Create();
+                        arrays[i] = jagged_ar;
                     }
                 }
                 if (type_num == 2)
@@ -44,24 +44,24 @@ namespace HW3_4
                     int num = rnd.Next(0, 3);
                     if (num == 0)
                     {
-                        Single<double> single_array = new Single<double>("y", rnd.Next(1, 11));
-                        single_array.Create();
-                        arrays[i] = single_array;
+                        Single<double> single_ar = new Single<double>("y", rnd.Next(1, 11));
+                        single_ar.Create();
+                        arrays[i] = single_ar;
                     }
                     if (num == 1)
                     {
                         int rows = rnd.Next(1, 11);
                         int columns = rnd.Next(1, 11);
-                        Matrix<double> matrix_array = new Matrix<double>("y", rows, columns);
-                        matrix_array.Create();
-                        arrays[i] = matrix_array;
+                        Matrix<double> matrix_ar = new Matrix<double>("y", rows, columns);
+                        matrix_ar.Create();
+                        arrays[i] = matrix_ar;
                     }
                     if (num == 2)
                     {
                         int jagged_rows = rnd.Next(1, 11);
-                        Jagged<double> jagged_array = new Jagged<double>("y", jagged_rows);
-                        jagged_array.Create();
-                        arrays[i] = jagged_array;
+                        Jagged<double> jagged_ar = new Jagged<double>("y", jagged_rows);
+                        jagged_ar.Create();
+                        arrays[i] = jagged_ar;
                     }
                 }
                 if (type_num == 3)
@@ -69,24 +69,24 @@ namespace HW3_4
                     int num = rnd.Next(0, 3);
                     if (num == 0)
                     {
-                        Single<bool> single_array = new Single<bool>("y", rnd.Next(1, 11));
-                        single_array.Create();
-                        arrays[i] = single_array;
+                        Single<bool> single_ar = new Single<bool>("y", rnd.Next(1, 11));
+                        single_ar.Create();
+                        arrays[i] = single_ar;
                     }
                     if (num == 1)
                     {
                         int rows = rnd.Next(1, 11);
                         int columns = rnd.Next(1, 11);
-                        Matrix<bool> matrix_array = new Matrix<bool>("y", rows, columns);
-                        matrix_array.Create();
-                        arrays[i] = matrix_array;
+                        Matrix<bool> matrix_ar = new Matrix<bool>("y", rows, columns);
+                        matrix_ar.Create();
+                        arrays[i] = matrix_ar;
                     }
                     if (num == 2)
                     {
                         int jagged_rows = rnd.Next(1, 11);
-                        Jagged<bool> jagged_array = new Jagged<bool>("y", jagged_rows);
-                        jagged_array.Create();
-                        arrays[i] = jagged_array;
+                        Jagged<bool> jagged_ar = new Jagged<bool>("y", jagged_rows);
+                        jagged_ar.Create();
+                        arrays[i] = jagged_ar;
                     }
                 }
                 if (type_num == 4)
@@ -94,24 +94,24 @@ namespace HW3_4
                     int num = rnd.Next(0, 3);
                     if (num == 0)
                     {
-                        Single<string> single_array = new Single<string>("y", rnd.Next(1, 11));
-                        single_array.Create();
-                        arrays[i] = single_array;
+                        Single<string> single_ar = new Single<string>("y", rnd.Next(1, 11));
+                        single_ar.Create();
+                        arrays[i] = single_ar;
                     }
                     if (num == 1)
                     {
                         int rows = rnd.Next(1, 11);
                         int columns = rnd.Next(1, 11);
-                        Matrix<string> matrix_array = new Matrix<string>("y", rows, columns);
-                        matrix_array.Create();
-                        arrays[i] = matrix_array;
+                        Matrix<string> matrix_ar = new Matrix<string>("y", rows, columns);
+                        matrix_ar.Create();
+                        arrays[i] = matrix_ar;
                     }
                     if (num == 2)
                     {
                         int jagged_rows = rnd.Next(1, 11);
-                        Jagged<string> jagged_array = new Jagged<string>("y", jagged_rows);
-                        jagged_array.Create();
-                        arrays[i] = jagged_array;
+                        Jagged<string> jagged_ar= new Jagged<string>("y", jagged_rows);
+                        jagged_ar.Create();
+                        arrays[i] = jagged_ar;
                     }
                 }
             }

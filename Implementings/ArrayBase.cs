@@ -1,23 +1,26 @@
-namespace HW3_3
+using HW3_4.Interfaces;
+
+namespace HW3_4.Implementings
 {
-    public abstract class ArrayBase : IArrayBase
+    public abstract class ArrayBase<T> : IArrayBase
     {
-        public bool Init { get; set; }
+        protected static TypeHelper<T> type_helper;
+        public bool Init { get; }
 
         public abstract void Print();
 
-        public abstract double Average();
+        protected abstract void CreateByRandom();
 
-        public abstract void CreateByRandom();
-
-        public abstract void CreateByUser();
+        protected abstract void CreateByUser();
 
         public ArrayBase(string init)
         {
-            Init = true;
-            if (init == "no")
+            type_helper = new TypeHelper<T>();
+            if (init == "N")
             {
-                Init = false;
+                CreateByUser();
+            } else {
+                CreateByRandom();
             }
         }
     }

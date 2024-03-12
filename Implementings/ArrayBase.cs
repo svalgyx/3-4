@@ -9,18 +9,18 @@ namespace HW3_4.Implementings
 
         public abstract void Print();
 
-        protected abstract void CreateByRandom();
+        protected abstract void RandomCreate();
 
-        protected abstract void CreateByUser();
+        protected abstract void UserCreate();
 
         public ArrayBase(string init)
         {
             type_helper = new TypeHelper<T>();
             if (init == "N")
             {
-                CreateByUser();
+                UserCreate();
             } else {
-                CreateByRandom();
+                RandomCreate();
             }
         }
     }
